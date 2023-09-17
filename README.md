@@ -1,2 +1,33 @@
 # Socket-Programming
-Socket Programming Practice w/Python&amp;C
+Socket Programming Practice w/Python&amp;C <br/>
+Following https://realpython.com/python-sockets/<br/><br/>
+
+### Goal:<br/>
+#### 1. Socket 통신 로직 제대로 이해하기
+#### 2. Python -> C
+### Execution
+#### shell #1
+```python echo-server.py```
+<br/><br/>
+#### shell #2
+```python echo-client.py```
+<br/><br/><br/>
+#### output in shell #1
+ - Connected by ('127.0.0.1', 56522)
+<br/><br/>
+#### output in shell #2
+ - Received b'Hello, world'
+<br/><br/><br/>
+
+### Viewing Socket State
+```netstat -an```
+<br/><br/>
+#### 이미 LISTENING 상태인 포트를 쓰고 싶다면?
+- Get PID
+```Get-Process -Id (Get-NetTCPConnection -LocalPort 포트#).OwningProcess```
+<br/>
+-> KILL
+```taskkill /F /PID PID#```
+
+
+
