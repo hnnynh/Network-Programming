@@ -1,0 +1,12 @@
+# Publish-Subscribe Pattern
+
+- Connect Publishers(N) - SubScribers(M)
+- Asynchronous
+- unidirectional - client never send() & server never recv()
+
+# Practice
+
+code reference: https://zguide.zeromq.org/docs/chapter1/#Getting-the-Message-Out
+
+- Server - zipcode, temperature, relhumidity Publish
+    -> Client - zipcode가 10001인 정보를 받아서 출력

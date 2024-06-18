@@ -1,39 +1,18 @@
-# Socket-Programming
+# Network-Programming
 
-Socket Programming Practice w/Python&amp;C <br/>
-Following https://realpython.com/python-sockets/ and http://mobilelab.khu.ac.kr/wordpress/fssn/?vid=14<br/><br/>
+Network Programming Practice<br/>
+Following some documents & http://mobilelab.khu.ac.kr/wordpress/fssn/?vid=14<br/><br/>
 
-### Goal:<br/>
+## Goal:<br/>
 
-#### 1. Socket 통신 제대로 이해하기
+### [L4] Socket Programming w/Python
 
-#### 2. Python -> C
+- `python echo-server.py` <br/>
+- `python echo-client.py` <br/>
+- `netstat -an` - Viewing Socket State <br/><br/>
 
-### Execution
-
-#### shell #1
-
-`python echo-server.py`
-<br/>
-
-#### shell #2
-
-`python echo-client.py`
-<br/>
-
-#### output in shell #1
-
-- Connected by ('127.0.0.1', 56522)
-  <br/>
-
-#### output in shell #2
-
-- Received b'Hello, world'
-  <br/><br/>
-
-### Viewing Socket State
-
-`netstat -an`
+[realpython/python-sockets](https://realpython.com/python-sockets/) <br/>
+[Socket Programming w/C](https://www.geeksforgeeks.org/socket-programming-cc/)
 
 #### 이미 LISTENING 상태인 포트를 쓰고 싶다면?
 
@@ -42,3 +21,17 @@ Following https://realpython.com/python-sockets/ and http://mobilelab.khu.ac.kr/
   <br/>
   -> KILL
   `taskkill /F /PID PID#`
+
+---
+
+### [L7] Zero Message Queue
+
+Kernel -> Application
+
+<br/><br/>
+
+[ZeroMQ](https://zeromq.org/)<br/>
+[ZeroMQ Github](https://github.com/zeromq)<br/>
+[PyPI pyzmq](https://pypi.org/project/pyzmq/)
+
+---

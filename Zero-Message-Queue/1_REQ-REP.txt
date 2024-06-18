@@ -1,0 +1,9 @@
+# Request-Reply Patterns
+
+- Client 입장에서 Synchronous Reply (ZeroMQ는 Async)
+
+
+# Practice
+
+- Client - hello REQ 
+    -> Server - world REP

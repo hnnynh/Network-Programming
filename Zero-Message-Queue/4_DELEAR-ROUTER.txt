@@ -1,0 +1,9 @@
+# Dealer-Router Pattern
+
+- Async ver. of REQ-REP pattern
+- N:1 architecture
+
+# Practice
+
+code reference: https://zguide.zeromq.org/docs/chapter3/#The-Asynchronous-Client-Server-Pattern
+

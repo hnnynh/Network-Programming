@@ -1,0 +1,13 @@
+# Publish-Subscribe w/ Pipeline Pattern
+
+## Pipeline Pattern
+
+- Connects nodes in a fan-out/fan-in pattern
+
+
+# Practice
+
+code reference: https://stackoverflow.com/questions/49289072/zmq-dealer-router-communication
+
+- Server - PUB & PULL
+- Client - SUB & PUSH
