@@ -3,7 +3,9 @@
 Network Programming Practice<br/>
 Following some documents & http://mobilelab.khu.ac.kr/wordpress/fssn/?vid=14<br/><br/>
 
-## Goal:<br/>
+## Goal:
+
+Information Exchange
 
 ### [L4] Socket Programming w/Python
 
@@ -35,3 +37,22 @@ Kernel -> Application
 [PyPI pyzmq](https://pypi.org/project/pyzmq/)
 
 ---
+
+### [L7] HTTP
+
+메시지 기반 요청 - 응답 구조
+
+- Resources: Media-Types (Content-type, ..), URI
+- Transactions: HTTP Methods, Status Code
+- Methods: GET, HEAD, PUT, POST, TRACE, OPTIONS, DELETE
+- Monolithic vs SOA vs Microservice
+- SOAP(XML) vs REST(JSON)
+
+#### /1.1
+
+- Connections: HTTP over TCP/IP and TLS/SSL, Proxy
+- GET(R), PUT(U), POST(C), DELETE(D)
+
+2. /2.0
+
+3. /3.0
