@@ -53,6 +53,10 @@ Kernel -> Application
 - Connections: HTTP over TCP/IP and TLS/SSL, Proxy
 - GET(R), PUT(U), POST(C), DELETE(D)
 
-2. /2.0
+#### /2.0
+
+- gRPC
+  HTTP/2, RPC기반 Protobuf 활용 통신<br/>
+  [learn.microsoft - gRPC 서비스와 HTTP API 비교](https://learn.microsoft.com/ko-kr/aspnet/core/grpc/comparison?view=aspnetcore-8.0)
 
 3. /3.0

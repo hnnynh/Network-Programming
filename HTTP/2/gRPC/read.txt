@@ -1,0 +1,64 @@
+# gRPC
+
+- 원격 프로시저 호출(RPC) 모델 기반
+- HTTP/2 기반 (양방향 지원)
+- Payload: binary message <Protobuf> (.proto file) 
+    - serialize structured data
+    - OS, HW independent
+    - communicate w/network or storing data
+
+- 분산 서버 프로그래밍에 유용
+
+    - 단항(스트리밍 없음) - request / response
+    - 서버-클라이언트 스트리밍 - stream request / response
+    - 클라이언트-서버 스트리밍 - request / stream response
+    - 양방향 스트리밍 - stream request / stream response
+
+python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. hello.proto
+
+
+## 장점
+
+- Performance
+    1. Protobuf
+        - efficient binary message format
+        - serailizes very quickly
+        - small payload - important in limited bandwidth scenarios
+    
+    2. HTTP/2 based
+        - Binary framing and compression - compact and efficient
+        - Multiplexing of multiple HTTP/2 calls over a single TCP (요청대로 응답 순서 보장 응답 X)
+            -> Mobile Backend
+
+- Code generation -> efficient
+    1. proto file - automatic generation
+    2. sharing the .proto file
+    
+- Strict specification
+    vs No formal specification for HTTP API with JSON 
+    - No need to debate
+
+- Streaming
+    - long-lived, real-time communication streams
+    - Supports all streaming combinations
+
+- Deadline/timeouts & cancellation
+    - 
+
+
+## 단점
+
+- Limited browser support
+    - impossibble to directly call a gRPC service from a browser
+        -> gRPC 사용에 필요한 HTTP/2를 브라우저에 강제할 수 없음
+
+- Not human readalbe
+    - Additional tooling needed
+
+## 권장 시나리오
+
+- 마이크로 서비스: gRPC는 대기 시간이 짧고 처리량이 높은 통신을 위해 설계되었습니다. gRPC는 효율성이 중요한 경량 마이크로 서비스에 적합합니다.
+- 지점 간 실시간 통신: 양방향 스트리밍을 위한 뛰어난 지원 기능을 제공합니다. gRPC 서비스는 폴링을 사용하지 않고 실시간으로 메시지를 푸시할 수 있습니다.
+- Polyglot 환경: gRPC 도구는 널리 사용되는 모든 개발 언어를 지원하며, 따라서 gRPC는 다중 언어 환경에 적합합니다.
+- 네트워크 제한 환경: gRPC 메시지는 경량 메시지 형식인 Protobuf를 사용하여 직렬화됩니다. gRPC 메시지는 해당하는 JSON 메시지보다 항상 작습니다.
+- IPC(프로세스 간 통신): Unix do기본 소켓 및 명명된 파이프와 같은 IPC 전송을 gRPC와 함께 사용하여 동일한 컴퓨터의 앱 간에 통신할 수 있습니다. 자세한 내용은 gRPC와 프로세스 간 통신을 참조하세요.
