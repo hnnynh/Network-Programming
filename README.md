@@ -53,10 +53,18 @@ Kernel -> Application
 - Connections: HTTP over TCP/IP and TLS/SSL, Proxy
 - GET(R), PUT(U), POST(C), DELETE(D)
 
-#### /2.0
+#### /2
 
 - gRPC
   HTTP/2, RPC기반 Protobuf 활용 통신<br/>
-  [learn.microsoft - gRPC 서비스와 HTTP API 비교](https://learn.microsoft.com/ko-kr/aspnet/core/grpc/comparison?view=aspnetcore-8.0)
+  [learn.microsoft - gRPC 서비스와 HTTP API 비교](https://learn.microsoft.com/ko-kr/aspnet/core/grpc/comparison?view=aspnetcore-8.0)<br/>
+  [Python Microservices With gRPC](https://realpython.com/python-microservices-grpc/)
 
-3. /3.0
+- HTTP/2
+  Google SPDY - 구글의 비표준 네트워크 프로토콜 <br/>
+  - binary framing layer 도입
+  - 지연시간 감소, 응답 다중화, 헤더필드 압축, 우선순위 지정, 서버 푸시
+    [Go http2 package](https://pkg.go.dev/golang.org/x/net/http2)<br/>
+    [Certificates for localhost](https://letsencrypt.org/docs/certificates-for-localhost/)
+
+#### /3
