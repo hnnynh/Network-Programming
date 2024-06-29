@@ -1,0 +1,32 @@
+- Out of Kernel
+-> Move  to application layer
+    => Flexibility & Programmability
+
+- Powershift from Standard to Opensource
+    => Experimental >> Opensource >> Standard
+
+- Out of TCP
+-> UDP based new transport Protocol
+
+
+__QUIC__
+
+- TCP를 대체하는 범용 목적의 전송 계층 통신 프로토콜
+    - Slow start + Head of Line Blocking 개선
+    - 신뢰성 보장
+- TLS 1.3 포함 (Secure Communication) - 연결 설정하면서 TLS도 같이 -> 빠른 핸드쉐이크
+- Stream based Transprot (1연결 n병렬 스트림)
+- Independent Streams avoid HOL Blockin
+
+=> QUIC을 활용하는 HTTP 통신 = HTTP/3 
+
+    BUT...
+        - Non Socket API - 표준 API가 없음
+        - Kernel & Code Optimization - CPU 소비 up
+
+    
+__HTTP/3__
+
+- Frame 송수신
+- 우선순위 제어 (PRIORITY 프레임)
+- 서버 PUSH
